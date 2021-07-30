@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'cn.encmed'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    implementation 'io.netty:netty-all:4.1.33.Final'
+
+    implementation 'com.alibaba:fastjson:1.2.56'
+
+    // slf4j
+    implementation 'org.slf4j:slf4j-android:1.7.26'
+
+    implementation group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.25'
+}
