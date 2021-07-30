@@ -1,4 +1,4 @@
-package cn.encmed.push.packet;
+package com.lesliefang.packet;
 
 public class MessagePacket extends Packet {
     private Message message;

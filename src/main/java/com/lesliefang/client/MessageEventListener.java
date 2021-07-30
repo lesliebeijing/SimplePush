@@ -1,6 +1,6 @@
-package cn.encmed.push.client;
+package com.lesliefang.client;
 
-import cn.encmed.push.packet.Message;
+import com.lesliefang.packet.Message;
 
 public interface MessageEventListener {
     void onReceiveMessage(Message message);

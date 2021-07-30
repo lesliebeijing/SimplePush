@@ -1,8 +1,8 @@
-package cn.encmed.push.client;
+package com.lesliefang.client;
 
-import cn.encmed.push.packet.HeartbeatPacket;
-import cn.encmed.push.packet.Message;
-import cn.encmed.push.packet.MessagePacket;
+import com.lesliefang.packet.HeartbeatPacket;
+import com.lesliefang.packet.Message;
+import com.lesliefang.packet.MessagePacket;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
 import io.netty.handler.timeout.IdleState;

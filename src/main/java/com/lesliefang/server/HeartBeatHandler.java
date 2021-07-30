@@ -1,6 +1,6 @@
-package cn.encmed.push.server;
+package com.lesliefang.server;
 
-import cn.encmed.push.packet.HeartbeatPacket;
+import com.lesliefang.packet.HeartbeatPacket;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;

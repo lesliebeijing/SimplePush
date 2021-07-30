@@ -1,8 +1,8 @@
-package cn.encmed.push.server;
+package com.lesliefang.server;
 
-import cn.encmed.push.packet.Message;
-import cn.encmed.push.packet.MessageCodec;
-import cn.encmed.push.packet.MessagePacket;
+import com.lesliefang.packet.Message;
+import com.lesliefang.packet.MessageCodec;
+import com.lesliefang.packet.MessagePacket;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;

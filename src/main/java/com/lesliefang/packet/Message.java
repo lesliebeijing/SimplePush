@@ -1,4 +1,4 @@
-package cn.encmed.push.packet;
+package com.lesliefang.packet;
 
 public class Message {
     private String type; // 消息类型

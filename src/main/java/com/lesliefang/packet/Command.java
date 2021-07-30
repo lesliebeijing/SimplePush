@@ -1,4 +1,4 @@
-package cn.encmed.push.packet;
+package com.lesliefang.packet;
 
 public interface Command {
     byte HEAT_BEAT = 0x10;

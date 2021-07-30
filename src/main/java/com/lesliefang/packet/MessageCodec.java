@@ -1,4 +1,4 @@
-package cn.encmed.push.packet;
+package com.lesliefang.packet;
 
 import com.alibaba.fastjson.JSON;
 import io.netty.buffer.ByteBuf;
