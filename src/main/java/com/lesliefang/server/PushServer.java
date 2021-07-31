@@ -72,4 +72,8 @@ public class PushServer {
         boss.shutdownGracefully();
         worker.shutdownGracefully();
     }
+
+    public static void main(String[] args) {
+        new PushServer().run(5000);
+    }
 }

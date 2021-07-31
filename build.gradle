@@ -18,8 +18,11 @@ dependencies {
 
     implementation 'com.alibaba:fastjson:1.2.56'
 
-    // slf4j
-    implementation 'org.slf4j:slf4j-android:1.7.26'
+    // slf4j  for android
+//    implementation 'org.slf4j:slf4j-android:1.7.26'
 
-    implementation group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.25'
+    compile 'org.slf4j:slf4j-api:1.7.25'
+    compile 'org.apache.logging.log4j:log4j-api:2.8.2'
+    compile 'org.apache.logging.log4j:log4j-core:2.8.2'
+    compile 'org.apache.logging.log4j:log4j-slf4j-impl:2.8.2'
 }

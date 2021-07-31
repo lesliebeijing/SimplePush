@@ -40,17 +40,18 @@ public class PushClient {
     }
 
     public void connect(String host, int port) {
+        logger.info("try to connect {}:{}", host, port);
         b.connect(host, port).addListener(new ChannelFutureListener() {
             @Override
             public void operationComplete(ChannelFuture future) throws Exception {
                 if (future.isSuccess()) {
-                    logger.info("connected success {}:{}", host, port);
+                    logger.info("connected to {}:{}", host, port);
                 } else {
                     // 连接不成功，5秒后重新连接
+                    logger.info("failed connect to {}:{}, schedule reconnect after {}s", host, port, 5);
                     future.channel().eventLoop().schedule(new Runnable() {
                         @Override
                         public void run() {
-                            logger.info("begin reconnect {}:{}", host, port);
                             connect(host, port);
                         }
                     }, 5, TimeUnit.SECONDS);
@@ -61,5 +62,10 @@ public class PushClient {
 
     public void stop() {
         group.shutdownGracefully();
+    }
+
+    public static void main(String[] args) {
+        PushClient pushClient = new PushClient();
+        pushClient.connect("127.0.0.1", 5000);
     }
 }

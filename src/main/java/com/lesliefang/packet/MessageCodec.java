@@ -25,13 +25,12 @@ public class MessageCodec extends ByteToMessageCodec<Packet> {
         byte cmd = in.readByte();
         int length = in.readUnsignedShort();
         byte[] data = new byte[length];
-        ByteBuf dataBuf = in.readBytes(data);
-        dataBuf.release();
+        in.readBytes(data);
 
         Packet packet = null;
 
         switch (cmd) {
-            case Command.HEAT_BEAT:
+            case Command.HEART_BEAT:
                 packet = JSON.parseObject(data, HeartbeatPacket.class);
                 break;
             case Command.MESSAGE:
